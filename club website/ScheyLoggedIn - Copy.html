@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+body, html {
+
+  position: relative;
+  margin: auto;
+  background-image:  url("copeland-hall.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(68, 68, 68);
+
+}
+
+.box {
+  margin: 25px;
+  background-color: rgba(0, 0, 0, 0.671);
+  color: #fff;
+  border-radius: 5%;
+  padding-bottom: 10%;
+  font-size: 150%;
+  width: 400px;
+
+}
+
+
+.wrapper {
+    display: flex;
+    flex: content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+            .login {
+                transform: translate(0, 40px);
+                color: white;
+                font-size: large;
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center ;
+            }/*end of .login*/
+
+            .LoginFont{/*This is the font used for the "password" and "username" words*/
+                color: white;
+                font-size: large;
+                font-family: 'Times New Roman', Times, serif;
+                text-align: right;
+                padding-right: 30px;
+            }/*end of .LoginFont*/
+
+
+            .textBoxFormat{/*This is the css for the text box*/
+                color: white;
+                padding: 5px;
+                border-radius: 10px;
+                background-color: transparent;
+                border: 1px solid rgb(255, 255, 255);
+            }/*end of textBoxFormat*/
+            .textBoxFormat:focus{/*This is the css for the text box while it is being typed into*/
+                color: white;
+                border-radius: 10px;
+                border: 2px solid rgb(4, 124, 0);
+            }/*end of .textBoxFormat:focus*/
+
+            .ghostFormat{/*This is the css for the submit button*/
+              border-radius: 25px;
+                display: inline-block;
+                border-radius: 2px;
+                border: none;
+                height: 45px;
+                padding: 0;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                width: 25%;
+                background-color: rgb(0, 90, 65);
+                color: rgb(255, 255, 255);
+                border: 1px solid rgb(0, 77, 54);
+                font-family: 'Times New Roman', Times, serif;
+                transition: .2s ease;
+                font-size: large;
+            }/*end of .ghostFormat*/
+            .ghostFormat:hover {/*This is the css for the submit button when hovered over*/
+              border-radius: 25px;
+                background-color: rgb(0, 43, 30);
+                color: white;
+                transition: .2s ease;
+            }/*end of .ghostFormat:hover*/
+      .titles{
+        color: white;
+        font-size: large;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: right;
+          }
+  .header{
+    color: seashell;
+    background-color: rgba(4, 146, 51, 0.534);
+    display: flex;
+    align-items: stretch;
+  }
+  .scheyLogoInUpperLeft{
+    min-width: 230px;
+    flex-grow: 1;
+  }
+
+  .logOutBox{
+    flex-grow: 200;
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+    .logoutButton{
+      text-align: center;
+      display: inline-block;
+      border-radius: 5px;
+      border: none;
+      height: 45px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      width: 90px;
+      background-color: rgba(0, 0, 0, 0.287);
+      color: rgb(255, 255, 255);
+      border: 1px solid rgb(255, 255, 255);
+      font-family: 'Times New Roman', Times, serif;
+      transition: .2s ease;
+      font-size: large;
+    }
+    .logoutButton:hover{
+      border-radius: 25px;
+      background-color: rgb(0, 0, 0);
+      color: white;
+      transition: .2s ease;
+    }
+
+    .image {
+      height:105px;
+      width: 30%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 30%;
+      padding: 8px;
+    }
+
+  </style>
+     <meta charset="utf-8">
+     <title></title>
+  </head><!--End of head-->
+
+<!--header-->
+<body>
+
+
+  <div class="header">
+    <div class="scheyLogoInUpperLeft"><img src="Image_from_iOS.jpg" alt="logo" class= "image"  ></div>
+    <div class="logOutBox"><button type="button" name="button" class= "logoutButton" onclick = "logout()">Logout</button></div>
+  </div>
+
+<!--the three boxes-->
+    <div class="wrapper">
+<!--New User-->
+      <div class="box a">
+        <div class="login">
+          <form >
+            <div claas = "titles">New User</div><br>
+            <div class ="LoginFont">First Name: <input type="text" class="textBoxFormat" id ="firstName"></div><br>
+            <div class ="LoginFont">Last Name: <input type="text" class="textBoxFormat" id ="lastName"></div><br>
+            <div class ="LoginFont">Email: <input type="text" class="textBoxFormat" id ="email"></div><br>
+            <div class ="LoginFont">Graduating Year: <input type="text" class="textBoxFormat" id ="gradYear"></div><br>
+            <div class ="LoginFont">Major: <input type="text" class="textBoxFormat" id ="major"></div><br>
+            <div class ="LoginFont">Member Status: <input type="text" class="textBoxFormat" id ="memberStatus"></div>
+              <br><br>
+            <button type="button" name="button" class="ghostFormat" id ="addMember">Submit</button><br><br>
+          </form><!--End of Form-->
+        </div> <!--End of login-->
+      </div><!--End of box a-->
+
+<!--Search-->
+      <div class="box a"><!--End of head-->
+        <div class="login" id="addButton">
+          <form action=>
+            <div claas = "titles">Search</div><br>
+            <div class ="LoginFont">First Name: <input type="text" class="textBoxFormat" id = 'firstSearch'></div><br>
+            <div class ="LoginFont">Last Name: <input type="text" class="textBoxFormat"  id = 'lastSearch'></div><br>
+              <br><br>
+            <button type="button" name="button" class="ghostFormat" onclick="Search()">Search</button><br><br>
+          </form><!--End of Form-->
+        </div> <!--End of login-->
+      </div><!--End of box a-->
+
+<!--Results-->
+
+<div class="box a">
+  <div class="login">
+    <form action=>
+      <div claas = "titles">Info Found</div><br>
+      <div class ="LoginFont">First Name: <input type="text" class="textBoxFormat" name="firstName"></div><br>
+      <div class ="LoginFont">Last Name: <input type="text" class="textBoxFormat" name="lastName"></div><br>
+      <div class ="LoginFont">Email: <input type="text" class="textBoxFormat" name="email"></div><br>
+      <div class ="LoginFont">Graduating Year: <input type="text" class="textBoxFormat" name="gradYear"></div><br>
+      <div class ="LoginFont">Major: <input type="text" class="textBoxFormat" name="major"></div><br>
+      <div class ="LoginFont">Member Status: <input type="text" class="textBoxFormat" name="memberStatus"></div>
+        <br><br>
+    </form><!--End of Form-->
+  </div> <!--End of login-->
+</div><!--End of box a-->
+
+  </div><!--End of wrapper-->
+  <script  src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+<script  src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-database.js"></script>
+
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+apiKey: "AIzaSyCgIyVEOE7siDQhPoyPF2E0UYZsNWPtY0c",
+authDomain: "shaywebsite.firebaseapp.com",
+databaseURL: "https://shaywebsite.firebaseio.com",
+projectId: "shaywebsite",
+storageBucket: "shaywebsite.appspot.com",
+messagingSenderId: "464205975760",
+appId: "1:464205975760:web:6200f4e27eaceeff53ced5",
+measurementId: "G-HZM42FKC8F"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+firebase.analytics();
+</script>
+<script src = database.js></script>
+  <script src = index.js></script>
+</body>
+</html>
