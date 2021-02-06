@@ -11,27 +11,27 @@ def printBoard(board):
 
 
 def Backtracker(board, row, col):
-    #Cheks to see if we have reached the end of the board
+    #Checks to see if we have reached the end of the board
     if (row == 8 and col == 9):
         return True
-    #checks to see if we have reached the end of the column
+    #Checks to see if we have reached the end of the column
     if col == 9:
         row = row + 1
         col = 0
-        #checks to see if there is already a number in the next spot,
-        #if so move on to the next one
+        #Checks to see if there is already a number in the next spot,
+        #If so move on to the next one
 
     if board[row][col] > 0:
         return Backtracker(board, row, col+1)
-        #places all possible canidates into the board 1-9
+        #Places all possible canidates into the board 1-9
 
     for num in range(1,10):
-        #chekcs each canidate before placing it in the board
+        #Checks each candidate before placing it in the board
         if Checker(board, row, col, num):
             board[row][col] = num
             if Backtracker(board, row, col+1):
                 return True
-        #if no possible canidates remain then we clear the spot and backtrack
+        #If no possible candidates remain then we clear the spot and backtrack
         board[row][col] = 0
     return False
 
